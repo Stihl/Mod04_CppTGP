@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cleanup",
+            "type": "shell",
+            "command": "del",
+            "args": [
+                "program"
+            ]
+        },
+        {
+            "label": "program_build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g", "bod_ch3_mod4.cpp", "-o", "program.exe"
+            ]
+        },
+        {
+            "label": "build current",
+            "dependsOn": [
+                "cleanup",
+                "program_build"
+            ]
+        }
+    ]
+}
